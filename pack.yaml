@@ -1,0 +1,303 @@
+name: project-management-pack
+version: 1.0.0
+type: skill-pack
+summary: PMO领域完整Skill包：含6个编排Skill（串联原子Skill为工作流）、15个原子Skill、4个Agent编排配置，覆盖项目全生命周期：启动规划→执行管控→检查收尾。
+skills:
+- id: wbs-schedule-milestone-orchestrator
+  path: skills/wbs-schedule-milestone-orchestrator/SKILL.md
+  purpose: 编排计划链：WBS分解→排程→里程碑规划，输出三层计划体系
+  规划_id: 编排链 Skill
+  chain:
+  - wbs-builder
+  - schedule-sequencer
+  - milestone-planner
+  readiness: available
+- id: earned-value-evm-orchestrator
+  path: skills/earned-value-evm-orchestrator/SKILL.md
+  purpose: 编排挣值管控链：EVM数据→偏差分析→ETC重新估算→SCCB审批
+  规划_id: 编排链 Skill
+  chain:
+  - earned-value-tracker
+  - etc-reestimation-helper
+  readiness: available
+- id: project-oversight-risk-orchestrator
+  path: skills/project-oversight-risk-orchestrator/SKILL.md
+  purpose: 编排监控风险联动：进度采集→偏差分析→风险更新→整改跟踪
+  规划_id: 编排链 Skill
+  chain:
+  - project-oversight
+  - risk-register-builder
+  readiness: available
+- id: org-stakeholder-communication-orchestrator
+  path: skills/org-stakeholder-communication-orchestrator/SKILL.md
+  purpose: 编排治理沟通联动：组织架构→干系人分析→沟通矩阵→报告模板
+  规划_id: 编排链 Skill
+  chain:
+  - org-structure-builder
+  - stakeholder-comms-planner
+  readiness: available
+- id: strategy-charter-orchestrator
+  path: skills/strategy-charter-orchestrator/SKILL.md
+  purpose: 编排决策→章程链：战略决策→章程生成→组织架构→启动计划
+  规划_id: 编排链 Skill
+  chain:
+  - strategy-decision-facilitation
+  - project-charter-writer
+  - org-structure-builder
+  readiness: available
+- id: cross-dept-solution-orchestrator
+  path: skills/cross-dept-solution-orchestrator/SKILL.md
+  purpose: 编排协调对策链：问题分析→多方案生成→干系人对齐→执行跟踪
+  规划_id: 编排链 Skill
+  chain:
+  - cross-dept-coordination
+  - solution-generation
+  readiness: available
+- id: strategy-decision-facilitation
+  path: skills/strategy-decision-facilitation/SKILL.md
+  purpose: 5阶段战略决策框架：问题界定→方案→评估→共识→文档化
+  规划_id: PMO-01
+  readiness: available
+- id: project-charter-writer
+  path: skills/project-charter-writer/SKILL.md
+  purpose: 生成.docx项目章程，含治理架构/10组职责/6阶段/28项交付物清单
+  规划_id: PMO-02
+  readiness: available
+- id: org-structure-builder
+  path: skills/org-structure-builder/SKILL.md
+  purpose: 设计三层次治理架构（决策层/领导层/执行层）+ RACI矩阵
+  规划_id: PMO-03
+  readiness: available
+- id: executive-communication
+  path: skills/executive-communication/SKILL.md
+  purpose: 生成高管沟通材料（状态简报/议题背景/决策请求）
+  规划_id: PMO-04
+  readiness: available
+- id: project-oversight
+  path: skills/project-oversight/SKILL.md
+  purpose: 五维度监控仪表盘（进度/成本/质量/风险/变更）
+  规划_id: PMO-05
+  readiness: available
+- id: risk-register-builder
+  path: skills/risk-register-builder/SKILL.md
+  purpose: 风险登记册维护：识别→评估→应对→监控
+  规划_id: PMO-07
+  readiness: available
+- id: scope-boundary-checker
+  path: skills/deprecated/scope-boundary-checker/SKILL.md
+  purpose: 已废弃，由scope-management替代
+  规划_id: PMC-001
+  readiness: deprecated
+  deprecated_reason: 功能已合并至scope-management，替代范围边界检查+排除项编写
+  note: 废弃时间：2026-07-30
+- id: inclusions-exclusions-writer
+  path: skills/deprecated/inclusions-exclusions-writer/SKILL.md
+  purpose: 已废弃，功能已合并至scope-management
+  规划_id: PMC-007
+  readiness: deprecated
+  deprecated_reason: 功能已合并至scope-management
+  note: 废弃时间：2026-07-31
+- id: earned-value-tracker
+  path: skills/earned-value-tracker/SKILL.md
+  purpose: EVM指标计算：PV/AC/EV → SPI/CPI → 健康度评分
+  规划_id: PMO-13
+  readiness: available
+- id: wbs-builder
+  path: skills/wbs-builder/SKILL.md
+  purpose: WBS分解：3层结构（子系统→工作包→任务）+ 估算工时
+  规划_id: PMO-06
+  readiness: available
+- id: compliance-check
+  path: skills/compliance-check/SKILL.md
+  purpose: 合规审计与检查清单执行
+  规划_id: PMO-15
+  readiness: available
+- id: constraint-assumption-register-builder
+  path: skills/constraint-assumption-register-builder/SKILL.md
+  purpose: 约束假设登记册：来源→影响→验证状态→责任人
+  规划_id: PMC-002
+  readiness: available
+- id: milestone-planner
+  path: skills/milestone-planner/SKILL.md
+  purpose: 里程碑规划：决策点/交付点/评审点/发布点，含入口出口标准
+  规划_id: PMO-09
+  readiness: available
+- id: schedule-sequencer
+  path: skills/schedule-sequencer/SKILL.md
+  purpose: 进度排序+关键路径识别+工期估算
+  规划_id: PMC-003
+  readiness: available
+- id: stakeholder-comms-planner
+  path: skills/stakeholder-comms-planner/SKILL.md
+  purpose: 沟通矩阵+报告模板+会议管理
+  规划_id: PMC-006
+  readiness: available
+- id: cross-dept-coordination
+  path: skills/cross-dept-coordination/SKILL.md
+  purpose: 跨部门协调：问题分类→协调会议→共识达成→行动跟踪
+  规划_id: PMO-08
+  readiness: available
+- id: solution-generation
+  path: skills/solution-generation/SKILL.md
+  purpose: 问题对策生成：5-Why分析+MCDA评估+决策树
+  规划_id: PMO-20
+  readiness: available
+- id: report-generation
+  path: skills/report-generation/SKILL.md
+  purpose: 项目报告生成：周报/月报/专题报告
+  规划_id: PMO-14
+  readiness: available
+- id: meeting-notes
+  path: skills/meeting-notes/SKILL.md
+  purpose: 会议纪要全流程管理
+  规划_id: PMO-16
+  readiness: available
+- id: change-control
+  path: skills/change-control/SKILL.md
+  purpose: 变更流程控制：申请→评估→审批→实施→验证
+  规划_id: PMO-19
+  readiness: available
+- id: config-item-management
+  path: skills/config-item-management/SKILL.md
+  purpose: 配置项管理：登记→版本→基线→变更追踪
+  规划_id: PMO-18
+  readiness: available
+- id: template-management
+  path: skills/template-management/SKILL.md
+  purpose: 模板库管理：版本控制+推荐规则
+  规划_id: PMO-17
+  readiness: available
+- id: architecture-review
+  path: skills/architecture-review/SKILL.md
+  purpose: 架构设计方案评审：完整性/合规性/可扩展性
+  规划_id: PMO-10
+  readiness: available
+- id: requirements-control
+  path: skills/requirements-control/SKILL.md
+  purpose: 需求管控咨询：完整性/正确性/一致性评估
+  规划_id: PMO-11
+  readiness: available
+- id: deployment-planning
+  path: skills/deployment-planning/SKILL.md
+  purpose: 投产规划咨询：方案→演练→切换→试运行
+  规划_id: PMO-12
+  readiness: available
+- id: cost-estimation-helper
+  path: skills/cost-estimation-helper/SKILL.md
+  purpose: 成本估算：类比法/参数法/自下而上
+  规划_id: PMC-004
+  readiness: available
+- id: etc-reestimation-helper
+  path: skills/etc-reestimation-helper/SKILL.md
+  purpose: ETC重新估算：偏差原因→剩余工期→SCCB审批包
+  规划_id: PMC-005
+  readiness: available
+- id: scope-management
+  path: skills/scope-management/SKILL.md
+  purpose: 统一范围管理：范围定义表+灰区待定清单+变更触发条件+WBS映射
+  规划_id: PMC-001+PMC-007
+  readiness: available
+  note: 合并scope-boundary-checker+inclusions-exclusions-writer，替代两者
+- id: closure-report-writer
+  path: skills/closure-report-writer/SKILL.md
+  purpose: 项目收尾报告：档案索引+经验教训+决算+后评价
+  规划_id: PMC-008
+  readiness: available
+- id: lessons-learned-summarizer
+  path: skills/lessons-learned-summarizer/SKILL.md
+  purpose: 经验教训总结：分类编码+知识库更新建议
+  规划_id: PMC-009
+  readiness: methodology
+- id: ethics-management-plan-writer
+  path: skills/ethics-management-plan-writer/SKILL.md
+  purpose: 伦理合规管理计划：COI登记+合规清单+监管报送
+  规划_id: 补充规划
+  readiness: available
+- id: vendor-risk-assessment
+  path: skills/vendor-risk-assessment/SKILL.md
+  purpose: 供应商风险评估：资质合规/历史绩效/技术风险/运营风险/合规风险五维度，输出加权评分和采购建议
+  规划_id: 待补充
+  readiness: available
+agents:
+- id: strategic-execution-agent
+  name: 战略推动智能体
+  path: .agents/strategic-execution-agent/SKILL.md
+  purpose: 推动高层决策、构建组织治理、管理高层沟通
+  core_skills:
+  - strategy-charter-orchestrator
+  - org-stakeholder-communication-orchestrator
+  - wbs-schedule-milestone-orchestrator
+  - strategy-decision-facilitation
+  - project-charter-writer
+  - org-structure-builder
+  - executive-communication
+- id: project-control-agent
+  name: 项目管控智能体
+  path: .agents/project-control-agent/SKILL.md
+  purpose: 全局掌控、计划跟踪、风险识别、跨部门协调
+  core_skills:
+  - earned-value-evm-orchestrator
+  - project-oversight-risk-orchestrator
+  - cross-dept-solution-orchestrator
+  - wbs-schedule-milestone-orchestrator
+  - earned-value-tracker
+  - risk-register-builder
+  - schedule-sequencer
+- id: project-execution-agent
+  name: 项目执行智能体
+  path: .agents/project-execution-agent/SKILL.md
+  purpose: 日常执行支持、报告生成、会议纪要、变更流程、配置管理
+  core_skills:
+  - report-generation
+  - meeting-notes
+  - change-control
+  - compliance-check
+  - config-item-management
+  - template-management
+- id: project-inspection-agent
+  name: 项目检查智能体
+  path: .agents/project-inspection-agent/SKILL.md
+  purpose: 质量审查、供应商评估、合规检查、伦理合规、收尾审查
+  core_skills:
+  - architecture-review
+  - requirements-control
+  - compliance-check
+  - ethics-management-plan-writer
+  - closure-report-writer
+  - lessons-learned-summarizer
+recommended_order:
+- stage: 启动规划
+  skills:
+  - strategy-decision-facilitation
+  - project-charter-writer
+  - org-structure-builder
+  - scope-management
+  - constraint-assumption-register-builder
+- stage: 计划制定
+  skills:
+  - wbs-builder
+  - schedule-sequencer
+  - milestone-planner
+  - cost-estimation-helper
+  - risk-register-builder
+- stage: 执行管控
+  skills:
+  - earned-value-tracker
+  - project-oversight
+  - change-control
+  - cross-dept-coordination
+  - report-generation
+  - vendor-risk-assessment
+- stage: 检查收尾
+  skills:
+  - compliance-check
+  - architecture-review
+  - requirements-control
+  - closure-report-writer
+  - lessons-learned-summarizer
+skill_readiness_summary:
+  available: 36
+  framework: 0
+  methodology: 0
+  deprecated: 2
+  total: 38
