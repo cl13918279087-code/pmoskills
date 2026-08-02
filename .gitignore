@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+._*
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# Large binary files (keep these but don't track changes)
+# *.xlsx
+# *.pptx
+# *.docx

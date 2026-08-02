@@ -1,0 +1,112 @@
+项目元信息:
+  source_file: project_config.yaml
+  description: 项目基础配置（ID/类型/工期/客户）
+  used_by:
+  - all
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+项目背景与目标:
+  source_file: project_background.yaml
+  description: 项目背景、总体目标、5项职责目标
+  used_by:
+  - project-charter-writer
+  - org-structure-builder
+  - milestone-planner
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+项目范围:
+  source_file: project_scope.yaml
+  description: 8项工作范围 + 4项除外责任
+  used_by:
+  - wbs-builder
+  - milestone-planner
+  - scope-management
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+组织架构:
+  source_file: org_structure.yaml
+  description: 三层架构、关键人员、8个执行组、RACI矩阵
+  used_by:
+  - org-structure-builder
+  - stakeholder-comms-planner
+  - wbs-builder
+  last_updated: 2026年8月2日
+  data_completeness: 完整（关键人员姓名待确认）
+阶段规划:
+  source_file: phases.yaml
+  description: 7个阶段定义（周期/里程碑/入口/出口标准）
+  used_by:
+  - milestone-planner
+  - schedule-sequencer
+  - wbs-builder
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+里程碑清单:
+  source_file: milestones.yaml
+  description: 14个里程碑（ID/名称/类型/日期/责任人）
+  used_by:
+  - milestone-planner
+  - earned-value-tracker
+  - schedule-sequencer
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+交付物清单:
+  source_file: deliverables.yaml
+  description: 17项交付物（名称/责任人/提交时机）
+  used_by:
+  - wbs-builder
+  - scope-management
+  - closure-report-writer
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+约束条件:
+  source_file: constraints.yaml
+  description: 4项约束条件（C1-C4：工期/资源/实施商/合规）
+  used_by:
+  - constraint-assumption-register-builder
+  - risk-register-builder
+  - cost-estimation-helper
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+关键假设:
+  source_file: assumptions.yaml
+  description: 5项关键假设（A1-A5：合同/干系人/范围/供应商/政策）
+  used_by:
+  - constraint-assumption-register-builder
+  - risk-register-builder
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+成功衡量标准:
+  source_file: success_criteria.yaml
+  description: 5类成功指标（进度/质量/沟通/风险/干系人）
+  used_by:
+  - project-charter-writer
+  - earned-value-tracker
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+主要风险:
+  source_file: top_risks.yaml
+  description: Top 5风险（范围蔓延/技术能力/配合度/人员变动/切换风险）
+  used_by:
+  - risk-register-builder
+  - milestone-planner
+  - deployment-planning
+  last_updated: 2026年8月2日
+  data_completeness: 完整（可扩展至20项）
+沟通管理机制:
+  source_file: communication.yaml
+  description: 6种沟通类型 + 4级升级路径
+  used_by:
+  - stakeholder-comms-planner
+  - project-oversight
+  last_updated: 2026年8月2日
+  data_completeness: 完整
+待明确事项:
+  source_file: pending_matters.yaml
+  description: 5项待明确事项（实施商/硬件/优先级/监管/安全定级）
+  used_by:
+  - wbs-builder
+  - compliance-check
+  - deployment-planning
+  last_updated: 2026年8月2日
+  data_completeness: 待采集（行方提供）

@@ -1,0 +1,298 @@
+milestone-planner:
+  description: 银行业务里程碑规划系统
+  mandatory_inputs:
+  - 阶段规划
+  - 里程碑清单
+  - 项目范围
+  - 组织架构
+  optional_inputs:
+  - 成功衡量标准
+  - 沟通管理机制
+  outputs:
+  - 里程碑规划报告
+  data_from_library:
+  - phases.yaml
+  - milestones.yaml
+  - project_scope.yaml
+  - org_structure.yaml
+  missing_data: []
+  info_status: 完整
+  prerequisite_skill: project-info-manager
+risk-register-builder:
+  description: 风险登记册构建系统
+  mandatory_inputs:
+  - 项目背景与目标
+  - 约束条件
+  - 关键假设
+  - 主要风险
+  optional_inputs:
+  - 组织架构
+  - 阶段规划
+  outputs:
+  - 风险登记册
+  data_from_library:
+  - project_background.yaml
+  - constraints.yaml
+  - assumptions.yaml
+  - top_risks.yaml
+  missing_data: []
+  info_status: 完整
+  prerequisite_skill: project-info-manager
+constraint-assumption-register-builder:
+  description: 约束与假设登记册系统
+  mandatory_inputs:
+  - 约束条件
+  - 关键假设
+  - 项目范围
+  optional_inputs:
+  - 阶段规划
+  - 主要风险
+  outputs:
+  - 约束登记册
+  - 假设登记册
+  data_from_library:
+  - constraints.yaml
+  - assumptions.yaml
+  - project_scope.yaml
+  missing_data: []
+  info_status: 完整
+  prerequisite_skill: project-info-manager
+stakeholder-comms-planner:
+  description: 干系人沟通规划系统
+  mandatory_inputs:
+  - 组织架构
+  - 沟通管理机制
+  optional_inputs:
+  - 阶段规划
+  - 里程碑清单
+  outputs:
+  - 沟通矩阵
+  - 节奏计划
+  data_from_library:
+  - org_structure.yaml
+  - communication.yaml
+  missing_data: []
+  info_status: 完整
+  prerequisite_skill: project-info-manager
+org-structure-builder:
+  description: 组织架构设计系统
+  mandatory_inputs:
+  - 组织架构
+  - 项目范围
+  optional_inputs:
+  - 阶段规划
+  - 里程碑清单
+  outputs:
+  - 组织架构说明书
+  - RACI矩阵
+  data_from_library:
+  - org_structure.yaml
+  - project_scope.yaml
+  missing_data: []
+  info_status: 完整
+  prerequisite_skill: project-info-manager
+wbs-builder:
+  description: WBS工作分解结构系统
+  mandatory_inputs:
+  - 项目范围
+  - 交付物清单
+  - 阶段规划
+  optional_inputs:
+  - 组织架构
+  - 里程碑清单
+  outputs:
+  - WBS三层分解
+  - 工作包清单
+  data_from_library:
+  - project_scope.yaml
+  - deliverables.yaml
+  - phases.yaml
+  missing_data:
+  - 待明确事项（业务优先级）
+  info_status: 部分缺失（需行方提供业务优先级清单）
+  prerequisite_skill: project-info-manager
+schedule-sequencer:
+  description: 进度计划编排系统
+  mandatory_inputs:
+  - 阶段规划
+  - 里程碑清单
+  - 交付物清单
+  optional_inputs:
+  - 约束条件
+  - 组织架构
+  outputs:
+  - 进度计划书
+  - 关键路径
+  data_from_library:
+  - phases.yaml
+  - milestones.yaml
+  - deliverables.yaml
+  missing_data: []
+  info_status: 完整（WBS完成后可执行）
+  prerequisite_skill: project-info-manager
+earned-value-tracker:
+  description: 挣值跟踪系统
+  mandatory_inputs:
+  - 里程碑清单
+  - 成功衡量标准
+  optional_inputs:
+  - 阶段规划
+  - 约束条件
+  outputs:
+  - EVM指标报告
+  - SPI/CPI分析
+  data_from_library:
+  - milestones.yaml
+  - success_criteria.yaml
+  missing_data:
+  - EVM基线数据（PV/EV/AC）
+  info_status: 部分缺失（项目启动后由PMO录入基线数据）
+  prerequisite_skill: project-info-manager
+deployment-planning:
+  description: 投产规划系统
+  mandatory_inputs:
+  - 里程碑清单
+  - 主要风险
+  - 待明确事项
+  optional_inputs:
+  - 阶段规划
+  - 组织架构
+  outputs:
+  - 投产方案
+  - 回滚方案
+  data_from_library:
+  - milestones.yaml
+  - top_risks.yaml
+  - pending_matters.yaml
+  missing_data:
+  - 硬件到位计划
+  - 切换窗口
+  info_status: 部分缺失（上线前一个月补充）
+  prerequisite_skill: project-info-manager
+compliance-check:
+  description: 合规检查系统
+  mandatory_inputs:
+  - 待明确事项
+  - 项目范围
+  optional_inputs:
+  - 主要风险
+  - 约束条件
+  outputs:
+  - 合规检查报告
+  data_from_library:
+  - pending_matters.yaml
+  - project_scope.yaml
+  missing_data:
+  - 监管报送要求明细
+  - 安全等级保护定级
+  info_status: 部分缺失（需行方合规部门提供）
+  prerequisite_skill: project-info-manager
+project-charter-writer:
+  description: 项目章程编写系统
+  mandatory_inputs:
+  - 项目背景与目标
+  - 项目范围
+  - 组织架构
+  - 阶段规划
+  optional_inputs:
+  - 约束条件
+  - 成功衡量标准
+  outputs:
+  - 项目章程
+  data_from_library:
+  - project_background.yaml
+  - project_scope.yaml
+  - org_structure.yaml
+  - phases.yaml
+  missing_data: []
+  info_status: 完整
+  prerequisite_skill: project-info-manager
+change-control:
+  description: 变更控制系统
+  mandatory_inputs:
+  - 组织架构
+  - 里程碑清单
+  optional_inputs:
+  - 沟通管理机制
+  outputs:
+  - 变更记录
+  - 影响分析
+  data_from_library:
+  - org_structure.yaml
+  - milestones.yaml
+  missing_data:
+  - SCCB具体成员和变更阈值
+  info_status: 部分缺失（项目启动后确认）
+  prerequisite_skill: project-info-manager
+closure-report-writer:
+  description: 项目关闭报告编写
+  mandatory_inputs:
+  - 项目背景与目标
+  - 阶段规划
+  - 交付物清单
+  - 主要风险
+  optional_inputs:
+  - 成功衡量标准
+  - 约束条件
+  outputs:
+  - 项目关闭报告
+  data_from_library:
+  - project_background.yaml
+  - phases.yaml
+  - deliverables.yaml
+  - top_risks.yaml
+  missing_data: []
+  info_status: 完整（项目收尾时执行）
+  prerequisite_skill: project-info-manager
+lessons-learned-summarizer:
+  description: 经验教训总结系统
+  mandatory_inputs:
+  - 项目背景与目标
+  - 主要风险
+  - 约束条件
+  optional_inputs:
+  - 阶段规划
+  - 组织架构
+  outputs:
+  - 经验教训报告
+  data_from_library:
+  - project_background.yaml
+  - top_risks.yaml
+  - constraints.yaml
+  missing_data: []
+  info_status: 完整（项目收尾时执行）
+  prerequisite_skill: project-info-manager
+cost-estimation-helper:
+  description: 成本估算辅助系统
+  mandatory_inputs:
+  - 项目范围
+  - 阶段规划
+  - 约束条件
+  optional_inputs:
+  - 交付物清单
+  outputs:
+  - 成本估算报告
+  data_from_library:
+  - project_scope.yaml
+  - phases.yaml
+  - constraints.yaml
+  missing_data:
+  - EVM基线数据
+  info_status: 完整（可估算）
+  prerequisite_skill: project-info-manager
+etc-reestimation-helper:
+  description: ETC重新估算辅助
+  mandatory_inputs:
+  - 里程碑清单
+  - 成功衡量标准
+  optional_inputs:
+  - 主要风险
+  outputs:
+  - ETC重新估算报告
+  data_from_library:
+  - milestones.yaml
+  - success_criteria.yaml
+  missing_data:
+  - EVM基线数据（PV/EV/AC）
+  info_status: 部分缺失（项目执行后补充）
+  prerequisite_skill: project-info-manager
