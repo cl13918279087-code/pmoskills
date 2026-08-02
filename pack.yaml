@@ -218,6 +218,10 @@ skills:
   purpose: 供应商风险评估：资质合规/历史绩效/技术风险/运营风险/合规风险五维度，输出加权评分和采购建议
   规划_id: 待补充
   readiness: available
+- id: project-info-manager
+  name: project-info-manager
+  description: 管理项目全生命周期信息库，支持Skill运行时查询、写入、更新项目信息
+  chain: []
 agents:
 - id: strategic-execution-agent
   name: 战略推动智能体
