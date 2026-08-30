@@ -2,8 +2,8 @@
 name: "project-info-manager"
 display_name: "项目信息库管理器"
 description: "管理项目全生命周期信息库，支持Skill运行时查询、写入、更新项目信息，实现信息一次采集、全项目共享。"
-author: PMO-BUCON
-department: "PMO"
+author: li.chen56@gientech.com
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 tags:
