@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "风险登记册"
 description: "创建项目风险登记册，识别风险原因、影响、发生概率、应对策略和责任人，支持银行IT项目的系统化风险管理和监控。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

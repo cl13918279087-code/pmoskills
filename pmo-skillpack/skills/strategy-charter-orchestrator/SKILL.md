@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "战略决策编排"
 description: "编排从战略决策到执行的完整链条：战略决策 facilitation → 项目章程写作 → 里程碑规划 → WBS分解 → 进度计划，支持重大战略项目的端到端启动。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 handoffs: ["strategy-decision-facilitation", "project-charter-writer", "org-structure-builder"]

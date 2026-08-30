@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "跨部门问题解决编排"
 description: "编排跨部门问题解决流程：问题分析→多方案生成→干系人对齐→方案评审→执行跟踪，确保复杂跨部门问题得到系统性解决。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 handoffs: ["cross-dept-coordination", "solution-generation"]

@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "EVM绩效报告"
 description: "使用挣值管理（EVM）指标（PV/AC/EV、SPI/CPI、EAC）跟踪和报告银行IT项目的成本与进度绩效，输出标准化的EVM绩效报告。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

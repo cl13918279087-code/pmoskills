@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "项目管理章程"
 description: "编写全面的项目章程，定义项目目的、范围、目标、干系人、治理结构、组织层级、实施阶段和管理流程，引导项目团队从立项到执行全流程。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

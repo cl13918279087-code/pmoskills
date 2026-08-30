@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "战略决策报告"
 description: "引导战略性决策流程，指导干系人通过结构化分析、方案评估和共识建立，做出高质量的战略方向、投资优先级和关键权衡决策。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

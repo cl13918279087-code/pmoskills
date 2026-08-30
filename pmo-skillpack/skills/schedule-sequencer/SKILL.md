@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "进度计划书"
 description: "将WBS工作分解结构转化为可执行的进度计划，采用关键路径法（CPM）识别关键链路，结合依赖关系分析和工期估算，形成三层计划体系（L1/L2/L3）。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "范围管理计划"
 description: "统一范围管理，融合边界检查和范围定义写作，确保项目范围清晰、变更受控、交付物完整，支持大型银行IT项目的范围管控需求。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

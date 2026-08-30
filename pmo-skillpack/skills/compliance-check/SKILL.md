@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "合规检查报告"
 description: "确定项目管理制度和合规标准，建立检查清单，按周期执行合规性检查，记录检查结果，识别不符合项，推动整改，跟踪整改完成情况，输出合规总结报告。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

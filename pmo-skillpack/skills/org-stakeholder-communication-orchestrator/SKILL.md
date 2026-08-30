@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "组织与干系人沟通编排"
 description: "编排组织架构设计与干系人沟通全链条：治理结构设计→干系人识别→沟通策略制定→沟通计划执行→效果评估与改进，确保项目获得充分的高层支持和资源保障。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 handoffs: ["org-structure-builder", "stakeholder-comms-planner"]

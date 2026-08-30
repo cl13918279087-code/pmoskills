@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "配置项登记册"
 description: "建立和管理配置项（CI）登记册，跟踪项目过程中各类配置项的版本、状态和变更历史，确保项目资产的完整性和可追溯性。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

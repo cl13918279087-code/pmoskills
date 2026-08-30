@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "ETC重新估算申请表"
 description: "基于EVM数据重新估算银行IT项目的完工尚需（ETC），支持基于CPI、复合CPI×SPI、典型比率和人工工作量四种方法，输出重新估算报告和审批记录。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

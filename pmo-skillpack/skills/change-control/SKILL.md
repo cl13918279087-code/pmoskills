@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "变更申请单"
 description: "建立和管理项目变更控制流程，确保所有变更经过评估、审批和实施，保持项目范围、进度和成本的受控状态。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

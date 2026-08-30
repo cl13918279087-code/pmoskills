@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "项目报告"
 description: "聚合项目多维度数据（进度、问题、风险、资源、质量），生成格式化报告（周报/月报/专题报告），支持项目管理委员会决策和干系人沟通。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

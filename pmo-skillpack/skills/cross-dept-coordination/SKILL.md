@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "跨部门资源共享协议"
 description: "建立和管理跨部门协调机制，为涉及多个组织单元的项目制定资源分配方案、协调接口、解决冲突，确保跨部门合作高效顺畅。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

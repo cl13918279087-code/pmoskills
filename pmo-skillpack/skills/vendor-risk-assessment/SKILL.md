@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "供应商风险评估报告"
 description: "对供应商进行全面风险评估，涵盖资质合规、历史绩效、技术风险、运营风险，形成加权综合评分与采购决策建议，支持供应商准入和存量管理。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

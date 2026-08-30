@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "架构评审报告"
 description: "对架构设计方案进行全面评审，验证其完整性、合规性、可扩展性和技术先进性；检查架构规范执行情况；分析架构变更对项目范围、进度、成本和质量的影响；输出结构化评审报告。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

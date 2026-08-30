@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "挣值管理编排"
 description: "编排挣值管理全链条：EVM数据采集→绩效分析→重新估算→审批更新→基线变更，支持月度/季度项目绩效评估和银行IT项目监控。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 handoffs: ["earned-value-tracker", "etc-reestimation-helper"]

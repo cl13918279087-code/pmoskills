@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "项目文档模板库"
 description: "建立和维护项目文档模板库，确保项目文档格式统一、内容规范、版本受控，提升项目文档质量和可用性，减少格式错误，提高团队协作效率。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

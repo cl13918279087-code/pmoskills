@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "WBS进度里程碑编排"
 description: "编排完整规划链条：WBS分解→进度排序→里程碑规划，确保项目从立项到执行的规划工作有序衔接，支持大型银行IT项目的集成规划。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 handoffs: ["wbs-builder", "schedule-sequencer", "milestone-planner"]

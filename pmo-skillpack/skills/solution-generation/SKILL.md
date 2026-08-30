@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "解决方案生成"
 description: "针对项目问题、风险和挑战，系统性地生成和评估解决方案，辅助项目团队做出最佳决策，提升问题解决效率和质量。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

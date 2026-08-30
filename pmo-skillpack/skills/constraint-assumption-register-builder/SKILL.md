@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "约束与假设登记册"
 description: "建立和维护约束条件与假设清单，识别影响项目规划和执行的内外部约束，记录项目关键假设，支持风险评估和决策分析。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

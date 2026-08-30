@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "经验教训总结报告"
 description: "从银行IT项目中提取、分类和记录经验教训，覆盖监管合规、技术选型、项目管理三大类别，输出结构化的经验教训总结报告，支持知识沉淀和持续改进。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

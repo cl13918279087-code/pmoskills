@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "需求评审报告"
 description: "对需求文档进行完整性、正确性、一致性和可执行性评审；检查范围变更情况；评估变更请求对进度、成本、质量的影响；输出评估报告与控制建议。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

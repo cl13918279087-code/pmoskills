@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "WBS工作分解结构"
 description: "将银行IT项目分解为三层WBS（阶段/子系统/工作包），支持进度排序、责任人分配和成本估算，为项目执行提供清晰的工作结构。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

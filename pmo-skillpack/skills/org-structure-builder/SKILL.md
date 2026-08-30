@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "组织架构说明书"
 description: "设计并记录项目组织结构，包括治理层级、功能团队定义、角色职责矩阵（RACI）和汇报路线，为大型银行IT项目建立清晰的组织框架。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "项目监控与风险编排"
 description: "编排项目监控与风险管理循环：进度/风险数据采集→偏差分析→预警评估→风险应对→升级管理，支持项目执行全程可视化和问题快速响应。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 handoffs: ["project-oversight", "risk-register-builder"]

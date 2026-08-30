@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "成本估算申请表"
 description: "提供银行业务项目的标准化成本估算能力，支持类比估算法、参数估算法、自下而上估算法三种策略，适用于人力资源、软硬件、第三方服务、培训与项目管理等各类成本项。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

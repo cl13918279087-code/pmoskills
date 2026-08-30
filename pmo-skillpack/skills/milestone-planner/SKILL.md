@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "里程碑规划报告"
 description: "定义、规划和跟踪银行IT项目的四类里程碑（决策点/交付点/评审点/发布点），支持合规审计和治理签收流程，确保项目全生命周期可视可控。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

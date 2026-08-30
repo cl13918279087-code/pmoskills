@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "项目关闭报告"
 description: "正式关闭已完成或取消的项目，归档所有项目记录，捕获并总结经验教训，输出项目关闭报告。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

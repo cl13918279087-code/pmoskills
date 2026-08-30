@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "伦理合规管理计划"
 description: "建立项目伦理、合规和利益冲突管理框架，识别潜在伦理风险，制定管理策略，确保项目符合组织道德标准和监管要求。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

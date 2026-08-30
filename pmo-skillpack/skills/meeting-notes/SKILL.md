@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "会议纪要"
 description: "记录、整理、分发和管理项目会议纪要，确保会议决议得到有效跟踪和闭环执行。适用于项目启动会、周例会、月度汇报、专题会议、评审会等各种会议场景。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

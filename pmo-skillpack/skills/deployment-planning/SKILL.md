@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "投产规划方案"
 description: "为系统投产制定全面的投产规划，包括投产范围、时间计划、资源配置和回滚方案；评估投产风险并制定应急响应计划；准备投产检查清单并执行投产前检查；监控投产后系统状态。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

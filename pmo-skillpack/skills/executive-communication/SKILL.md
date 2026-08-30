@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "高管简报"
 description: "设计并制作高管级沟通材料，包括董事会报告、 Steering Committee 汇报材料、管理层简报，传递项目状态、风险和决策建议。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---

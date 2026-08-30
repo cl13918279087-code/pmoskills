@@ -4,7 +4,7 @@ pack: "project-management-pack"
 display_name: "干系人沟通计划"
 description: "规划项目全生命周期中谁需要什么信息、何时需要、为什么需要、以什么格式传递，确保正确的信息在正确的时间传递给正确的干系人。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
 usage_scope: "仅本地使用"
 version: "v0.8.0"
 ---
