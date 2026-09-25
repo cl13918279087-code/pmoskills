@@ -1,0 +1,130 @@
+name: Skill CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-skills:
+    name: Skill Lint & Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Validate SKILL.md files
+        id: validate
+        run: |
+          echo "## Skill 格式校验报告" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          total=0
+          passed=0
+          failed=0
+          
+          for skill_dir in skills/*/; do
+            if [ -f "${skill_dir}SKILL.md" ]; then
+              total=$((total + 1))
+              skill_name=$(basename "$skill_dir")
+              
+              # 读取 SKILL.md
+              content=$(cat "${skill_dir}SKILL.md")
+              
+              # 检查必需字段
+              has_name=false
+              has_desc=false
+              desc_starts_with_use_when=false
+              errors=""
+              
+              if echo "$content" | grep -q "^name:"; then
+                has_name=true
+              else
+                errors="${errors}[${skill_name}] 缺少 name 字段; "
+              fi
+              
+              if echo "$content" | grep -q "^description:"; then
+                has_desc=true
+              else
+                errors="${errors}[${skill_name}] 缺少 description 字段; "
+              fi
+              
+              desc_line=$(echo "$content" | grep "^description:" | head -1)
+              if echo "$desc_line" | grep -q "Use when"; then
+                desc_starts_with_use_when=true
+              else
+                errors="${errors}[${skill_name}] description 必须以 'Use when' 开头; "
+              fi
+              
+              if $has_name && $has_desc && $desc_starts_with_use_when; then
+                passed=$((passed + 1))
+                echo "✅ ${skill_name}" >> $GITHUB_STEP_SUMMARY
+              else
+                failed=$((failed + 1))
+                echo "❌ ${skill_name}: $errors" >> $GITHUB_STEP_SUMMARY
+              fi
+            fi
+          done
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "**总计：${total} 个 Skill**" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ 通过：${passed}" >> $GITHUB_STEP_SUMMARY
+          echo "- ❌ 失败：${failed}" >> $GITHUB_STEP_SUMMARY
+          
+          if [ $failed -gt 0 ]; then
+            echo ""
+            echo "::error::有 $failed 个 Skill 格式校验失败，请修复后再提交。"
+            exit 1
+          fi
+
+      - name: List skills
+        run: |
+          echo "## Skill 清单" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Skill ID | 类型 |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|------|" >> $GITHUB_STEP_SUMMARY
+          for skill_dir in skills/*/; do
+            if [ -f "${skill_dir}SKILL.md" ]; then
+              skill_name=$(basename "$skill_dir")
+              if [[ "$skill_name" == *"orchestrator"* ]]; then
+                skill_type="编排类"
+              else
+                skill_type="交互类"
+              fi
+              echo "| \`$skill_name\` | $skill_type |" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+
+  validate-yaml:
+    name: Validate pack.yaml
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate YAML
+        run: |
+          python -c "
+          import yaml
+          with open('pack.yaml', 'r', encoding='utf-8') as f:
+            data = yaml.safe_load(f)
+          print(f'✅ pack.yaml 格式正确，共 {len(data.get(\"skills\", []))} 条 Skill 记录')
+          "

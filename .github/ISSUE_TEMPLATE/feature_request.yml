@@ -1,0 +1,82 @@
+name: 💡 Feature Request
+description: 为 PMO Skills 提出新功能或新 Skill 建议
+labels: ["enhancement"]
+projects: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提出新 Skill 或功能建议前，请先搜索是否已有类似的 [Issue](https://github.com/cl13918279087-code/pmoskills/issues) 或 [Discussion](https://github.com/cl13918279087-code/pmoskills/discussions)。
+
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill 名称（建议）
+      description: 你期望的新 Skill 中文名称
+      placeholder: 例如：风险登记册构建工具
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 需求背景
+      description: 描述具体的业务场景，为什么需要这个功能
+      placeholder: |
+        例如：在项目执行过程中，需要定期提取和记录经验教训...
+    validations:
+      required: true
+
+  - type: textarea
+    id: functionality
+    attributes:
+      label: 期望功能
+      description: 详细描述你期望实现的功能
+      placeholder: |
+        例如：
+        - 自动从项目文档中识别风险事件
+        - 输出结构化的风险登记册
+        - 支持导出为 Excel 格式
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 替代方案
+      description: 是否了解过现有 Skill 可以部分满足需求？描述你的调研结果
+    validations:
+      required: false
+
+  - type: dropdown
+    id: skill-type
+    attributes:
+      label: Skill 类型
+      options:
+        - 原子 Skill（单一功能，如风险登记、里程碑规划）
+        - 编排 Skill（组合多个原子 Skill 完成复杂任务）
+        - 不确定
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - P0 - 紧急（阻塞核心业务流程）
+        - P1 - 重要（显著提升工作效率）
+        - P2 - 一般（锦上添花的功能）
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contributions
+    attributes:
+      label: 贡献意愿
+      options:
+        - label: 我愿意参与该 Skill 的开发
+          required: false
+        - label: 我可以提供测试环境和案例数据
+          required: false

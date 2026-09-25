@@ -1,0 +1,105 @@
+name: 🐛 Bug Report
+description: 报告 PMO Skills 的运行时错误或异常行为
+labels: ["bug"]
+projects: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢报告 Bug！请填写以下信息，帮助我们快速定位问题。
+
+  - type: dropdown
+    id: skill-name
+    attributes:
+      label: 涉及 Skill
+      description: 出问题的 Skill 名称
+      placeholder: 选择或输入 Skill 名称
+      options:
+        - risk-register-builder
+        - milestone-planner
+        - project-charter-writer
+        - lessons-learned-summarizer
+        - wbs-builder
+        - schedule-sequencer
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: agent-version
+    attributes:
+      label: Agent 版本
+      description: 你的 Hermes Agent 版本
+      placeholder: 例如：v1.x.x
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 详细描述遇到的问题
+      placeholder: |
+        描述你遇到的具体问题...
+
+        例如：执行 risk-register-builder 时，输出内容与预期不符...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 一步步描述如何复现这个问题
+      placeholder: |
+        1. 执行 xxx Skill
+        2. 输入 xxx 参数
+        3. 出现 xxx 错误
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+      description: 你期望得到什么结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      description: 实际发生了什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志/截图
+      description: 附上相关日志或截图（可选）
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - P0 - 紧急（Skill完全不可用）
+        - P1 - 重要（功能受损，部分可用）
+        - P2 - 一般（轻微问题，不影响核心功能）
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: 环境确认
+      options:
+        - label: 已阅读 CONTRIBUTING.md
+          required: false
+        - label: 确认不是自己修改代码导致的问题
+          required: false
