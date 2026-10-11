@@ -1,0 +1,21 @@
+# 里程碑清单
+# 项目关键里程碑跟踪
+
+milestones:
+  - id: ms_01
+    name: ""               # 里程碑名称
+    type: "decision"       # decision | delivery | review | release
+    planned_date: ""       # 计划日期
+    actual_date: ""        # 实际日期
+    status: "pending"      # pending | achieved | delayed | cancelled
+    entry_criteria: []     # 入口标准
+    exit_criteria: []      # 出口标准
+    owner: ""              # 责任人
+    notes: ""
+
+  # 请根据实际项目添加更多里程碑
+  # 典型里程碑类型：
+  # - 决策点：立项评审、方案评审、SCCB审批
+  # - 交付点：需求冻结、设计完成、开发完成、测试通过
+  # - 评审点：设计评审、代码评审、上线评审
+  # - 发布点：灰度发布、全量发布、正式投运

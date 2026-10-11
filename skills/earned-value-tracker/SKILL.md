@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "EVM绩效报告"
 description: "使用挣值管理（EVM）指标（PV/AC/EV、SPI/CPI、EAC）跟踪和报告银行IT项目的成本与进度绩效，输出标准化的EVM绩效报告。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 earned-value-tracker
@@ -84,6 +85,11 @@ Invoke this skill when:
 
 ---
 
+1. 收集当前项目的 PV、AC、EV 数据
+2. 计算 SPI、CPI 绩效指标
+3. 分析偏差原因并记录
+4. 生成绩效报告与趋势预测
+5. 输出下一步管控建议
 ## 信息采集（Step 0 — EVM数据就绪检查）
 
 > ⚠️ **执行前必读**：EVM分析需要完整的数据基础。

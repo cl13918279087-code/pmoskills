@@ -3,6 +3,8 @@ name: "项目执行智能体"
 pack: "project-management-pack"
 agent_type: "project-execution"
 purpose: "负责项目日常执行跟踪，生成各类项目报告，管理会议纪要与规范检查，提供模版工具支持，维护配置项与变更流程管控，确保项目执行层高效运转。"
+version: "v1.0.0"
+usage_scope: "仅本地使用"
 domain: "PMO"
 agents: "BUCON"
 scenarios: ["项目日常跟踪", "项目报告生成", "会议纪要管理", "管理规范检查", "模版工具管理", "配置项管理", "变更流程控制"]
@@ -37,6 +39,7 @@ scenarios: ["项目日常跟踪", "项目报告生成", "会议纪要管理", "�
 | `template-management` | 模版工具管理（模板库/版本/推荐） | P1 |
 | `earned-value-tracker` | 挣值数据更新 | P1 |
 | `scope-management` | 范围边界检查 | P2 |
+| `project-info-manager` | 项目信息库管理 | 全流程信息共享 | P0 |
 
 ### 工具类Skill
 

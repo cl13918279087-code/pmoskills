@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "里程碑规划报告"
 description: "定义、规划和跟踪银行IT项目的四类里程碑（决策点/交付点/评审点/发布点），支持合规审计和治理签收流程，确保项目全生命周期可视可控。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 银行业务里程碑规划系统 (Milestone Planner - Banking Edition)
@@ -17,6 +18,7 @@ version: "v1.0.0"
 
 （见 ## 1. 概述）
 
+里程碑规划 Skill 为项目定义和管理关键里程碑点，区分决策点、交付点、评审点、发布点四类，确保项目关键阶段有明确的可交付标志和验收标准。
 ## When to use
 ## When to use this skill
 
@@ -133,6 +135,12 @@ version: "v1.0.0"
 
 ---
 
+1. 梳理项目全生命周期关键阶段
+2. 识别并分类各阶段里程碑（决策/交付/评审/发布）
+
+3. 定义每个里程碑的验收标准与交付物
+4. 对齐干系人确认里程碑计划
+5. 建立里程碑跟踪机制与升级流程
 ## 信息采集（Step 0 — 里程碑规划前的上下文采集）
 
 > ⚠️ **执行前必读**：里程碑规划需要明确的项目目标和阶段结构。

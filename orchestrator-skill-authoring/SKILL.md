@@ -124,6 +124,14 @@ Step 4: 更新 pack.yaml，在旧skill条目的 readiness 字段改为 "deprecat
 Step 5: 在pack.yaml的skills列表中，确保新skill在旧skill之前被引用
 ```
 
+## Agent Config Update — Multi-Agent Distribution Rule
+
+When creating a new **orchestrator or shared skill** that may be used by multiple agents:
+- **Do NOT** add to only one agent's `core_skills`
+- **Add to ALL relevant agents** that will use or invoke the skill
+- Example: `project-info-manager` was initially only in `project-execution-agent`, but needs to be in all 4 agents (strategic-execution, project-control, project-execution, project-inspection) because all agents query/write project information
+- This ensures the skill is discoverable and usable by any agent that needs it, without requiring cross-agent skill lookup
+
 ## Output format
 
 When you finish creating an orchestrator skill, produce:
@@ -131,3 +139,4 @@ When you finish creating an orchestrator skill, produce:
 1. **SKILL.md** at `~/.hermes/skills/project-management/skills/[skill-id]-orchestrator/SKILL.md`
 2. **pack.yaml update**: Add the orchestrator to the skills list in `pack.yaml` with `chain: [skill-A, skill-B, ...]`
 3. **Agent config update**: If the orchestrator belongs to a specific Agent, add it to that Agent's `core_skills` list
+4. **Multi-Agent distribution**: Check if the new skill should be added to other agents' `core_skills` — if it's a shared/information skill used by multiple agents, add it to all relevant agents

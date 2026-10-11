@@ -1,0 +1,57 @@
+# 信息项索引（自动维护）
+# 记录各信息文件的状态、版本、上次更新时间
+
+registry_version: "1.0.0"
+last_full_audit: ""
+
+items:
+  project_config:
+    file: "project_config.yaml"
+    status: "pending"      # pending | initialized | complete
+    last_updated: ""
+    version: "0.1.0"
+    completeness: 0        # 百分比
+
+  project_background:
+    file: "project_background.yaml"
+    status: "pending"
+    last_updated: ""
+    completeness: 0
+
+  org_structure:
+    file: "org_structure.yaml"
+    status: "pending"
+    last_updated: ""
+    completeness: 0
+
+  phases:
+    file: "phases.yaml"
+    status: "pending"
+    last_updated: ""
+    completeness: 0
+
+  milestones:
+    file: "milestones.yaml"
+    status: "pending"
+    last_updated: ""
+    completeness: 0
+
+  constraints:
+    file: "constraints.yaml"
+    status: "pending"
+    last_updated: ""
+    completeness: 0
+
+  success_criteria:
+    file: "success_criteria.yaml"
+    status: "pending"
+    last_updated: ""
+    completeness: 0
+
+  top_risks:
+    file: "top_risks.yaml"
+    status: "pending"
+    last_updated: ""
+    completeness: 0
+
+overall_completeness: 0    # 整体完成度百分比

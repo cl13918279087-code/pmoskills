@@ -1,0 +1,24 @@
+# 主要风险
+# 项目Top Risks跟踪
+
+top_risks:
+  - id: risk_01
+    title: ""              # 风险标题
+    category: "technical"  # technical | business | resource | external | compliance
+    probability: "medium"  # low | medium | high
+    impact: "high"         # low | medium | high
+    risk_score: 0          # P × I 数值
+    status: "identified"   # identified | active | mitigated | closed
+    root_cause: ""         # 根本原因
+    mitigation_plan: ""    # 应对措施
+    contingency_plan: ""   # 应急预案
+    owner: ""              # 风险责任人
+    escalation_level: ""   # 升级层级
+    created_date: ""
+    last_updated: ""
+    closed_date: ""
+    notes: ""
+
+risk_thresholds:
+  high_risk_score: 9       # ≥9 触发升级
+  medium_risk_score: 4     # ≥4 需要重点关注

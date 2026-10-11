@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "风险登记册"
 description: "创建项目风险登记册，识别风险原因、影响、发生概率、应对策略和责任人，支持银行IT项目的系统化风险管理和监控。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 isk-register-builder（银行业务定制版）
@@ -38,6 +39,11 @@ Create a project risk register with causes, impacts, likelihood, responses, and 
 
 ---
 
+1. 识别项目全生命周期潜在风险来源
+2. 评估风险发生概率与影响程度
+3. 制定风险应对策略（规避/转移/减轻/接受）
+4. 分配风险责任人并建立监控机制
+5. 定期回顾风险登记册并更新状态
 ## 信息采集（Step 0 — 风险登记册前的上下文采集）
 
 > ⚠️ **执行前必读**：风险登记册需要明确的项目背景和已知风险。

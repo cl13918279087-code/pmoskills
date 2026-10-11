@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "挣值管理编排"
 description: "编排挣值管理全链条：EVM数据采集→绩效分析→重新估算→审批更新→基线变更，支持月度/季度项目绩效评估和银行IT项目监控。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 handoffs: ["earned-value-tracker", "etc-reestimation-helper"]
 ---
@@ -12,6 +13,8 @@ earned-value-evm-orchestrator
 
 ## Purpose
 
+
+挣值管理编排 Skill 将 PV/AC/EV 数据采集、绩效分析、ETC 重新估算串联为完整链条，为项目管理层提供基于数据的进度与成本健康度判断。
 ## When to use
 
 Use this skill when:

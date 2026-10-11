@@ -1,0 +1,23 @@
+# 约束条件
+# 项目内外部约束来源、影响、验证状态
+
+constraints:
+  - id: constr_01
+    source: ""             # 约束来源
+    type: "schedule"       # schedule | cost | scope | quality | resource | compliance
+    description: ""        # 约束描述
+    impact: ""             # 对项目的影响
+    validation_status: "unvalidated"  # unvalidated | validated | violated
+    validated_by: ""       # 验证人
+    validated_date: ""     # 验证日期
+    notes: ""
+
+assumptions:
+  - id: assump_01
+    description: ""        # 假设描述
+    type: "technical"      # technical | business | resource | external
+    impact: "high"         # high | medium | low
+    validation_status: "unvalidated"
+    validated_by: ""
+    validated_date: ""
+    notes: ""

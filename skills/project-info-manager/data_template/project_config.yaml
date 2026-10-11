@@ -1,0 +1,19 @@
+# 项目基础配置
+# 此文件为项目信息库模板，首次使用时自动复制到工作区
+
+project_info:
+  project_id: ""           # 项目唯一标识，由用户指定或自动生成
+  project_name: ""         # 项目名称
+  project_alias: ""        # 项目简称
+  owner: ""                # 项目总监/项目经理
+  start_date: ""           # 计划启动日期 YYYY-MM-DD
+  end_date: ""             # 计划结束日期 YYYY-MM-DD
+  status: "planning"       # planning | active | suspended | closed
+  phase: ""                # 当前所处阶段
+  version: "0.1.0"         # 信息库版本
+  last_updated: ""         # 最后更新日期
+
+metadata:
+  created_from_template: true
+  template_version: "1.0.0"
+  auto_init: true

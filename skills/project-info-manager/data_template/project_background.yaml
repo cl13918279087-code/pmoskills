@@ -1,0 +1,17 @@
+# 项目背景与目标
+# 描述项目发起原因、业务痛点、预期价值
+
+background:
+  business_driver: ""      # 业务驱动因素
+  pain_points: []          # 痛点列表
+  expected_value: ""       # 预期业务价值
+  success_indicators: []   # 成功指标
+
+objectives:
+  primary: ""              # 主要目标
+  secondary: []            # 次要目标
+  constraints: []          # 目标约束条件
+
+stakeholders_impacted:
+  internal: []             # 受影响的内部部门
+  external: []             # 受影响的外部干系人

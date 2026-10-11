@@ -3,6 +3,8 @@ name: "战略推动智能体"
 pack: "project-management-pack"
 agent_type: "strategic-execution"
 purpose: "推动高层决策，制定项目关键阶段的原则和标准，构建项目组织治理体系，确保组织架构与项目目标对齐，维护与高层的顺畅沟通。"
+version: "v1.0.0"
+usage_scope: "仅本地使用"
 domain: "PMO"
 agents: "BUCON"
 scenarios: ["战略决策推动", "重大项目决策落实", "标准原则制定", "组织架构构建", "高层沟通管理"]
@@ -43,6 +45,7 @@ scenarios: ["战略决策推动", "重大项目决策落实", "标准原则制�
 | `stakeholder-comms-planner` | 沟通矩阵/报告模板 | 高层沟通规划 |
 | `risk-register-builder` | 风险登记册维护 | 重大风险识别 |
 | `constraint-assumption-register-builder` | 约束假设登记 | 决策依据管理 |
+| `project-info-manager` | 项目信息库管理 | 全流程信息共享 |
 
 ---
 

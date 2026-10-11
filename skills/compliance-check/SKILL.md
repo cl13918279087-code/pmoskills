@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "合规检查报告"
 description: "确定项目管理制度和合规标准，建立检查清单，按周期执行合规性检查，记录检查结果，识别不符合项，推动整改，跟踪整改完成情况，输出合规总结报告。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 compliance-check
@@ -17,6 +18,7 @@ compliance-check
 
 （见 ## 目的）
 
+合规检查 Skill 为项目提供标准化合规性审查能力，确保项目执行过程符合监管要求、行业标准及内部制度，降低合规风险，满足审计追踪要求。
 ## When to use
 ## When to use this skill
 

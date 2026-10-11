@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "WBS工作分解结构"
 description: "将银行IT项目分解为三层WBS（阶段/子系统/工作包），支持进度排序、责任人分配和成本估算，为项目执行提供清晰的工作结构。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 bs-builder（银行业务定制版）
@@ -172,6 +173,12 @@ Recommend the single most valuable next skill based on the output:
 - **cost-estimation-helper** → if budget / FTE costing is the primary need.
 
 ## Quality Gates
+
+
+- [ ] WBS 层级不超过 4 层
+- [ ] 每个工作包可交付成果明确
+- [ ] 工作包责任人不为空
+- [ ] WBS 与项目范围说明书一致
 ## Quality gates
 - WBS covers all project deliverables and regulatory obligations.
 - Every work package has an owner, hour estimate, and clear deliverable output.

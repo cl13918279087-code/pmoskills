@@ -3,6 +3,8 @@ name: "项目检查智能体"
 pack: "project-management-pack"
 agent_type: "project-inspection"
 purpose: "负责项目质量管理审查，供应商评估，以及合规审计与检查，确保项目交付物符合质量标准，供应商选择合规，运营符合法规要求。"
+version: "v1.0.0"
+usage_scope: "仅本地使用"
 domain: "PMO"
 agents: "BUCON"
 scenarios: ["质量审查", "供应商评估", "合规检查", "伦理合规", "收尾审查"]
@@ -36,6 +38,7 @@ scenarios: ["质量审查", "供应商评估", "合规检查", "伦理合规", "
 | `ethics-management-plan-writer` | 伦理合规管理计划 | P1 |
 | `closure-report-writer` | 项目收尾报告编写 | P1 |
 | `lessons-learned-summarizer` | 经验教训总结 | P1 |
+| `project-info-manager` | 项目信息库管理 | 全流程信息共享 | P0 |
 
 ### 工具Skill
 

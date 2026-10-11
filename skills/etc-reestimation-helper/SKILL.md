@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "ETC重新估算申请表"
 description: "基于EVM数据重新估算银行IT项目的完工尚需（ETC），支持基于CPI、复合CPI×SPI、典型比率和人工工作量四种方法，输出重新估算报告和审批记录。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
  概述
@@ -19,6 +20,7 @@ version: "v1.0.0"
 
 （本章节中文名为 ## 概述）
 
+完工尚需估算 Skill 基于挣值管理数据，重新估算项目剩余工作所需成本，结合当前绩效因子提供更准确的完工预测，支持项目管理层决策。
 ## When to use
 ## When to use this skill
 

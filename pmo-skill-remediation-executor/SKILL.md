@@ -723,6 +723,137 @@ Step R.4 — 验证
 # 更新pack.yaml: path: skills/scope-boundary-checker/ → path: skills/deprecated/scope-boundary-checker/
 ```
 
+### 模式S：多Sheet Excel规划文档结构维护（增行/删行/序号重排/视图重建）
+
+当规划Excel文件需要补充缺失Skill、删除重复行、或调整序号时，执行以下步骤：
+
+**适用场景**：
+- 新增Skill（补充缺失的规划Skill）→ 插入新行 → 重建Skill视图
+- 删除重复Skill行 → 序号重排 → 重建Skill视图
+- 序号出现跳号/乱序 → 全局重排 → 重建Skill视图
+- Skill表增删行后，Skill视图行号错位 → 完整重建Skill视图
+
+**执行步骤**：
+
+**Step S.1 — 读取并核对现状**
+```python
+import openpyxl
+
+wb = openpyxl.load_workbook(excel_path, data_only=True)
+ws = wb['Skill']          # 主数据表
+ws_v = wb['Skill视图']     # Agent×Skill归属矩阵
+
+print("=== Skill表总行数（含表头）===")
+print(f"  max_row={ws.max_row}, max_col={ws.max_column}")
+
+print("\n=== Skill视图总行数 ===")
+print(f"  max_row={ws_v.max_row}, max_col={ws_v.max_column}")
+
+print("\n=== 逐行核对 Skill表 vs Skill视图 ===")
+for r in range(2, min(ws.max_row+1, ws_v.max_row+1)):
+    sheet_name = ws.cell(r, 3).value  # C列：Skill名称
+    view_name  = ws_v.cell(r, 1).value  # A列：Skill名称
+    match = "✓" if sheet_name == view_name else "✗"
+    print(f"  Row {r:2d}: Sheet={str(sheet_name):25s}  View={str(view_name):25s} {match}")
+```
+
+**Step S.2 — 增行操作（补充缺失Skill）**
+```python
+# 在指定位置插入新行（插入位置之后的行自动下移）
+insert_row = 35  # 插入位置（1-based）
+
+new_skills = [
+    # (序号, ID, 名称, 类型, 领域, Agent主用, 备注)
+    (35, "PMO-S036", "范围管理Skill", "编排类", "PMO", "项目管控智能体主用Skill", "统一范围管理、变更受控"),
+    (36, "PMO-S037", "变更控制Skill", "编排类", "PMO", "项目管控智能体主用Skill", "建立变更控制流程"),
+]
+
+for seq, sid, name, stype, domain, agent, remark in reversed(new_skills):
+    ws.insert_rows(insert_row)
+    ws.cell(insert_row, 1).value = seq      # A列：序号
+    ws.cell(insert_row, 2).value = sid       # B列：Skill ID
+    ws.cell(insert_row, 3).value = name       # C列：Skill名称
+    ws.cell(insert_row, 4).value = stype     # D列：类型
+    ws.cell(insert_row, 5).value = domain    # E列：业务领域
+    ws.cell(insert_row, 11).value = agent     # K列：主用Agent
+    ws.cell(insert_row, 12).value = remark    # L列：备注
+```
+
+**Step S.3 — 删行操作（删除重复行）**
+```python
+# 先定位重复行（通过搜索名称），再删除
+target_name = "政策解读Skill"
+for r in range(2, ws.max_row + 1):
+    if ws.cell(r, 3).value == target_name:
+        print(f"  删除 Row {r}: {target_name}")
+        ws.delete_rows(r)
+        break  # 只删第一个
+```
+
+**Step S.4 — 序号全局重排**
+```python
+# 非PMO段（假设PMO最大序号=36）从37开始连续排列
+start_seq = 37
+for r in range(37, ws.max_row + 1):
+    old_seq = ws.cell(r, 1).value
+    new_seq = start_seq + (r - 37)
+    ws.cell(r, 1).value = new_seq
+    print(f"  Row {r}: {old_seq} → {new_seq}")
+```
+
+**Step S.5 — 重建Skill视图（完整重建，而非局部修改）**
+```python
+# 插入/删除行后，Skill视图行号会错位，必须完整重建
+ws_v.delete_rows(2, ws_v.max_row)  # 删除所有数据行（保留表头）
+
+for r in range(2, ws.max_row + 1):
+    skill_name = ws.cell(r, 3).value
+    # 追加到Skill视图末行
+    new_row = ws_v.max_row + 1
+    ws_v.cell(new_row, 1).value = skill_name
+    # ... 其他列按需填充
+    print(f"  Skill视图 Row {new_row}: {skill_name}")
+```
+
+**Step S.6 — 验证**
+```python
+# 核对1：两表行数一致
+assert ws.max_row == ws_v.max_row, f"行数不一致！Skill={ws.max_row}, 视图={ws_v.max_row}"
+
+# 核对2：逐行名称一致
+mismatches = []
+for r in range(2, ws.max_row + 1):
+    s_name = ws.cell(r, 3).value
+    v_name = ws_v.cell(r, 1).value
+    if s_name != v_name:
+        mismatches.append((r, s_name, v_name))
+
+if mismatches:
+    print(f"❌ {len(mismatches)} 个名称不一致：")
+    for r, s, v in mismatches:
+        print(f"  Row {r}: Sheet={s}, View={v}")
+else:
+    print("✅ 全部对齐")
+
+# 核对3：PMO Skill计数
+pmo_count = sum(1 for r in range(2, ws.max_row+1)
+                if str(ws.cell(r,2).value or '').startswith(('PMO-', 'PMC-')))
+print(f"PMO Skill总数: {pmo_count}")
+```
+
+**陷阱**：
+- ❌ 只增行不重建视图：插入行后Skill视图行号错位，必须完整重建
+- ❌ 硬编码行号：序号调整前先用搜索定位行号，避免行号因前次操作已变化
+- ❌ 不验证直接保存：验证通过后再 `wb.save()`
+
+**与模式N的区别**：
+| 模式 | 适用场景 | 操作类型 |
+|------|---------|---------|
+| 模式N | 状态列批量更新（"覆盖状态"列） | 单元格写值 |
+| 模式S | 增/删行、序号调整、视图重建 | 行操作+完整重建 |
+
+---
+
 ### 模式N：Excel规划清单状态批量更新
 
 当多个Skill的readiness从framework改为available后，需要同步更新Excel规划清单的"覆盖状态"列：
@@ -830,3 +961,4 @@ P2修复（P1完成后执行）：
 | ❌ 模式Q/R中假设SKILL.md存在`number:`字段 | 现有Skill绝大多数SKILL.md没有`number:`字段，grep返回0不代表验证通过 | 每次必须先读取SKILL.md文件内容确认字段存在，再进行提取和对比 |
 | ❌ 模式R中yaml.safe_load打乱pack.yaml键顺序 | safe_load会改变YAML键的顺序，与yaml.dump配合使用会打乱skills数组排列 | 优先使用正则替换修改pack.yaml，而非load→modify→dump；如果必须使用yaml库，必须在dump时指定`sort_keys=False`并尽可能保留原格式 |
 | ❌ 模式Q/R中DOCX编号被错误当作权威来源 | 之前对DOCX执行"重新编号方案A"覆盖了原始编号，而原始编号权威来源是pack.yaml | 任何跨文档编号比对场景，必须以pack.yaml的`规划_id`为唯一权威基准；DOCX/MD/SKILL.md都应向pack.yaml对齐 |
+| ❌ 副本目录修改未同步源目录 | 修改 `pmo-skillpack/` 中的 SKILL.md 后提交了 GitHub，但 `~/.hermes/skills/project-management/skills/` 源目录未同步修改，导致本地 Agent 运行时仍使用未修复的旧文件 | 当存在源目录（`~/.hermes/skills/project-management/skills/`）和副本目录（`pmo-skillpack/skills/`）并行时，任何 frontmatter 或内容修改必须**同步到两个目录**后再提交 GitHub；修改完成后用 `grep -r "旧值" ~/.hermes/skills/project-management/skills/` 验证源文件已更新 |

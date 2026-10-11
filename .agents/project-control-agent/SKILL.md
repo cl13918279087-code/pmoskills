@@ -3,6 +3,8 @@ name: "项目管控智能体"
 pack: "project-management-pack"
 agent_type: "project-control"
 purpose: "负责项目全局掌控，制定项目总体计划并跟踪执行，识别与管理风险，协调跨部门问题，推进关键环节，管控架构与需求，确保项目按计划顺利推进。"
+version: "v1.0.0"
+usage_scope: "仅本地使用"
 domain: "PMO"
 agents: "BUCON"
 scenarios: ["项目全局掌控", "计划制定与跟踪", "风险识别与规避", "跨部门协调沟通", "关键环节推进", "架构管控咨询", "需求管控咨询"]
@@ -48,6 +50,7 @@ scenarios: ["项目全局掌控", "计划制定与跟踪", "风险识别与规�
 | `requirements-control` | 需求管控咨询 | 需求评审 |
 | `deployment-planning` | 投产规划咨询 | 投产管理 |
 | `scope-management` | 范围管理 | 范围变更 |
+| `project-info-manager` | 项目信息库管理 | 全流程信息共享 |
 
 ---
 

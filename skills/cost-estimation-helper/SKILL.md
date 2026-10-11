@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "成本估算申请表"
 description: "提供银行业务项目的标准化成本估算能力，支持类比估算法、参数估算法、自下而上估算法三种策略，适用于人力资源、软硬件、第三方服务、培训与项目管理等各类成本项。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 银行业务成本估算辅助系统 (Cost Estimation Helper - Banking Edition)
@@ -21,6 +22,7 @@ version: "v1.0.0"
 
 （本章节中文名为 ## 概述）
 
+成本估算 Skill 为银行 IT 项目提供标准化成本评估能力，支持类比法、参数法、自下而上法三种估算策略，输出可靠的成本预算供决策参考。
 ## When to use
 ## When to use this skill
 
@@ -206,6 +208,11 @@ version: "v1.0.0"
 
 ---
 
+1. 明确估算范围与假设条件
+2. 选择适用的估算方法（类比法适用于概算，参数法适用于快速估算，详细估算采用自下而上）
+3. 收集历史项目数据与参数指标
+4. 执行估算计算并输出成本区间
+5. 标注估算置信度与主要风险因素
 ## 信息采集（Step 0 — 成本估算前的数据就绪检查）
 
 > ⚠️ **执行前必读**：成本估算需要明确的规模指标和项目类型。

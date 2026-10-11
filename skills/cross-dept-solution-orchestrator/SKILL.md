@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "跨部门问题解决编排"
 description: "编排跨部门问题解决流程：问题分析→多方案生成→干系人对齐→方案评审→执行跟踪，确保复杂跨部门问题得到系统性解决。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 handoffs: ["cross-dept-coordination", "solution-generation"]
 ---
@@ -12,6 +13,8 @@ cross-dept-solution-orchestrator
 
 ## Purpose
 
+
+跨部门问题解决编排 Skill 协调多方利益相关者，通过结构化流程推动跨部门问题的系统性分析与解决，确保方案获得各方认可并有效执行。
 ## When to use
 
 Use this skill when:

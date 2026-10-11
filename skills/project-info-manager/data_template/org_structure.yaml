@@ -1,0 +1,33 @@
+# 组织架构
+# 项目治理结构与人员角色
+
+governance:
+  decision_layer:
+    name: "决策层"
+    members: []
+    responsibilities: []
+
+  leadership_layer:
+    name: "领导层"
+    members: []
+    responsibilities: []
+
+  execution_layer:
+    name: "执行层"
+    members: []
+    responsibilities: []
+
+raci:
+  # R = Responsible, A = Accountable, C = Consulted, I = Informed
+  key_processes:
+    - process: ""
+      r: []  # 负责人
+      a: []  # 审批人
+      c: []  # 咨询者
+      i: []  # 知情者
+
+contacts:
+  project_manager: ""
+  technical_lead: ""
+  quality_assurance: ""
+  change_control_board: ""

@@ -2,7 +2,9 @@
 name: "project-info-manager"
 display_name: "项目信息库管理器"
 description: "管理项目全生命周期信息库，支持Skill运行时查询、写入、更新项目信息，实现信息一次采集、全项目共享。"
-author: PMO-BUCON
+author: li.chen56@gientech.com
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 tags:
   - 项目信息库
@@ -40,7 +42,7 @@ tags:
 | data_category | 信息类别（写入时） | `milestones`, `risks`, `constraints` |
 | data | 具体数据（写入时） | YAML/JSON格式的项目信息 |
 
-## Operating Procedure
+## Procedure
 
 ### Step 1 — 查询信息库
 
@@ -156,6 +158,110 @@ tags:
 1. 当前工作目录的`.项目信息库/`
 2. 上级目录的`.项目信息库/`
 3. 用户的`~/.hermes/projects/<project_id>/.项目信息库/`
+
+---
+
+## 自动初始化流程
+
+首次调用本Skill时，按以下顺序自动完成工作区初始化，**无需人员干预**：
+
+### Step 1 — 检测工作区信息库
+
+```python
+# 检测逻辑（伪代码）
+WORKING_DIRS = [
+    "./.项目信息库/",
+    "../.项目信息库/",
+    f"~/.hermes/projects/{project_id}/.项目信息库/"
+]
+
+for dir in WORKING_DIRS:
+    if dir.exists() and dir.has_yaml_files():
+        info_library_path = dir
+        break
+else:
+    # 未找到任何信息库 → 触发自动初始化
+    info_library_path = auto_initialize()
+```
+
+### Step 2 — 自动初始化（工作区为空时）
+
+```python
+def auto_initialize():
+    # 1. 确定项目根目录
+    project_root = detect_project_root()  # 或用户指定 project_id
+
+    # 2. 创建信息库目录
+    lib_dir = project_root / ".项目信息库"
+    lib_dir.mkdir(parents=True, exist_ok=True)
+
+    # 3. 从 skill data_template/ 复制所有模板文件
+    TEMPLATE_DIR = "~/.hermes/skills/project-management/skills/project-info-manager/data_template/"
+    for template_file in TEMPLATE_DIR.glob("*.yaml"):
+        dest = lib_dir / template_file.name
+        if not dest.exists():
+            shutil.copy(template_file, dest)
+
+    # 4. 更新 information_registry.yaml 的元数据
+    registry = load_yaml(lib_dir / "information_registry.yaml")
+    registry["registry_version"] = "1.0.0"
+    save_yaml(lib_dir / "information_registry.yaml", registry)
+
+    return lib_dir
+```
+
+### Step 3 — 返回初始化结果
+
+```
+✅ 项目信息库首次初始化完成
+═══════════════════════════════════════
+信息库路径: <project_root>/.项目信息库/
+初始化模板版本: 1.0.0
+已创建文件: 9 个
+  ✅ project_config.yaml
+  ✅ project_background.yaml
+  ✅ org_structure.yaml
+  ✅ phases.yaml
+  ✅ milestones.yaml
+  ✅ constraints.yaml
+  ✅ success_criteria.yaml
+  ✅ top_risks.yaml
+  ✅ information_registry.yaml
+
+信息库完成度: 0%
+首次使用建议: 调用 action=query 查看各信息项状态，确认需优先采集的信息
+═══════════════════════════════════════
+```
+
+### Step 4 — 初始化触发条件
+
+满足以下任一条件时触发自动初始化：
+- `action=query` 且工作区无信息库
+- `action=write` 且目标文件不存在
+- `action=status` 且信息库未初始化
+- `action=list_missing` 且无信息库
+
+### 自动创建的文件清单
+
+| 文件 | 说明 |
+|------|------|
+| `project_config.yaml` | 项目基础配置 |
+| `project_background.yaml` | 项目背景与目标 |
+| `org_structure.yaml` | 组织架构 |
+| `phases.yaml` | 阶段规划 |
+| `milestones.yaml` | 里程碑清单 |
+| `constraints.yaml` | 约束条件与假设 |
+| `success_criteria.yaml` | 成功衡量标准 |
+| `top_risks.yaml` | 主要风险 |
+| `information_registry.yaml` | 信息项索引（自动维护） |
+
+### 幂等性保证
+
+- 已存在的文件**不会被覆盖**（仅首次缺失时复制）
+- 模板文件有版本号（`template_version: "1.0.0"`），防止混用新旧模板
+- 信息库根目录不存在时才创建，已存在则直接使用
+
+---
 
 ## 与其他Skill的协作
 

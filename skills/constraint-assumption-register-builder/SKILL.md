@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "约束与假设登记册"
 description: "建立和维护约束条件与假设清单，识别影响项目规划和执行的内外部约束，记录项目关键假设，支持风险评估和决策分析。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 constraint-assumption-register-builder（银行业务定制版）
@@ -245,6 +246,11 @@ An assumption flows through three states:
 ---
 
 ## Quality Gates
+
+
+- [ ] 约束条件已完整识别（时间/成本/资源/质量/法规）
+- [ ] 假设条件已记录并标注置信度
+- [ ] 约束假设已与干系人确认
 ## Quality gates
 - [ ] Every constraint has at least one `影响维度` (进度 / 成本 / 范围 / 质量)
 - [ ] Every constraint has a defined `触发条件` — no constraints without a breach threshold

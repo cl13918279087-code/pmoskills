@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "架构评审报告"
 description: "对架构设计方案进行全面评审，验证其完整性、合规性、可扩展性和技术先进性；检查架构规范执行情况；分析架构变更对项目范围、进度、成本和质量的影响；输出结构化评审报告。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 architecture-review
@@ -113,6 +114,7 @@ architecture-review
 
 ---
 
+本 Skill 提供架构设计方案的标准化评审流程，确保架构满足功能非功能需求、符合企业标准，并具备可扩展性。评审结果作为架构决策的依据。
 ## 信息采集（Step 0 — 架构评审前的上下文采集）
 
 > ⚠️ **执行前必读**：架构评审需要明确的系统现状和技术选型背景。信息缺失时应主动采集。

@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "组织与干系人沟通编排"
 description: "编排组织架构设计与干系人沟通全链条：治理结构设计→干系人识别→沟通策略制定→沟通计划执行→效果评估与改进，确保项目获得充分的高层支持和资源保障。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 handoffs: ["org-structure-builder", "stakeholder-comms-planner"]
 ---
@@ -12,6 +13,8 @@ org-stakeholder-communication-orchestrator
 
 ## Purpose
 
+
+治理与干系人沟通编排 Skill 从组织架构设计到干系人沟通策略进行全链路编排，确保项目治理结构清晰、干系人沟通有效，信息传递准确及时。
 ## When to use
 
 Use this skill when:

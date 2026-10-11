@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "偏差分析报告"
 description: "建立并运行项目监控机制，包括进度跟踪、偏差分析、预警管理和升级处理，确保项目执行始终与计划保持一致，及时发现并应对潜在问题。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 project-oversight

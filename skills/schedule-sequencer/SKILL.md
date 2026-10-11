@@ -4,7 +4,8 @@ pack: "project-management-pack"
 display_name: "进度计划书"
 description: "将WBS工作分解结构转化为可执行的进度计划，采用关键路径法（CPM）识别关键链路，结合依赖关系分析和工期估算，形成三层计划体系（L1/L2/L3）。"
 author: li.chen56@gientech.com
-department: "PMO-BUCON"
+department: "BUCON"
+usage_scope: "仅本地使用"
 version: "v1.0.0"
 ---
 schedule-sequencer（银行业务进度排序系统）
@@ -21,6 +22,7 @@ schedule-sequencer（银行业务进度排序系统）
 
 （本章节中文名为 ## 概述）
 
+进度排序 Skill 将 WBS 工作分解转化为可执行的进度计划，采用关键路径法识别项目关键链路，为项目排期和资源调配提供科学依据。
 ## When to use
 ## When to use this skill
 
@@ -276,6 +278,11 @@ P01 --> P02 --> P03 --> P04 --> P05 --> P06 --> P07
 
 ---
 
+1. 整理 WBS 工作包及其工期估算
+2. 分析任务间依赖关系
+3. 构建项目网络图
+4. 计算关键路径与浮动时间
+5. 优化排程并输出项目进度计划
 ## 信息采集（Step 0 — 进度排序前的WBS就绪检查）
 
 > ⚠️ **执行前必读**：进度排序需要完整的WBS分解结果。

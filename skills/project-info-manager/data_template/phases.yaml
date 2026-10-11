@@ -1,0 +1,18 @@
+# 阶段规划
+# 定义项目各阶段的入口标准、出口标准、起止时间
+
+phases:
+  - id: phase_1
+    name: ""               # 阶段名称
+    start_date: ""         # 计划开始
+    end_date: ""           # 计划结束
+    entry_criteria: []     # 入口标准
+    exit_criteria: []      # 出口标准
+    key_deliverables: []   # 关键交付物
+    status: "pending"      # pending | in_progress | completed
+
+information_completeness:
+  phase_definition: false
+  entry_criteria_defined: false
+  exit_criteria_defined: false
+  timeline_confirmed: false

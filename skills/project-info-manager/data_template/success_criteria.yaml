@@ -1,0 +1,35 @@
+# 成功衡量标准
+# 项目成功的量化指标与目标值
+
+success_criteria:
+  schedule:
+    - metric: ""           # 指标名称
+      target: ""           # 目标值
+      current: ""          # 当前值
+      status: "pending"    # pending | achieved | at_risk | missed
+
+  cost:
+    - metric: ""
+      target: ""
+      current: ""
+      status: "pending"
+
+  quality:
+    - metric: ""
+      target: ""
+      current: ""
+      status: "pending"
+
+  scope:
+    - metric: ""
+      target: ""
+      current: ""
+      status: "pending"
+
+  benefits:
+    - metric: ""           # 业务收益指标
+      target: ""
+      current: ""
+      status: "pending"
+
+overall_status: "pending"  # pending | on_track | at_risk | achieved

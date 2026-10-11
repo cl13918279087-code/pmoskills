@@ -1,7 +1,7 @@
 name: project-management-pack
 version: 1.0.0
 type: skill-pack
-summary: PMO领域完整Skill包：含6个编排Skill（串联原子Skill为工作流）、15个原子Skill、4个Agent编排配置，覆盖项目全生命周期：启动规划→执行管控→检查收尾。
+summary: PMO领域完整Skill包：含6个编排Skill（串联原子Skill为工作流）、16个原子Skill、4个Agent编排配置，覆盖项目全生命周期：启动规划→执行管控→检查收尾。
 skills:
 - id: wbs-schedule-milestone-orchestrator
   path: skills/wbs-schedule-milestone-orchestrator/SKILL.md
@@ -219,9 +219,10 @@ skills:
   规划_id: 待补充
   readiness: available
 - id: project-info-manager
-  name: project-info-manager
-  description: 管理项目全生命周期信息库，支持Skill运行时查询、写入、更新项目信息
-  chain: []
+  path: skills/project-info-manager/SKILL.md
+  purpose: 项目信息库管理：统一存储项目全生命周期信息，供所有Skill共享查询，避免重复采集
+  规划_id: PMO-21
+  readiness: available
 agents:
 - id: strategic-execution-agent
   name: 战略推动智能体
@@ -302,6 +303,6 @@ recommended_order:
 skill_readiness_summary:
   available: 36
   framework: 0
-  methodology: 0
+  methodology: 1
   deprecated: 2
-  total: 38
+  total: 39
